@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/relativeLayout">
+
+    <LinearLayout
+        android:id="@+id/defocuser"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:orientation="horizontal"/>
+
+    <Button
+        android:id="@+id/cell11"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toStartOf="@+id/sidewaysTotalBanner"
+        app:layout_constraintTop_toBottomOf="@+id/totalBanner" />
+
+    <Button
+        android:id="@+id/cell12"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell11"
+        app:layout_constraintTop_toTopOf="@+id/cell11" />
+
+    <Button
+        android:id="@+id/cell13"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell12"
+        app:layout_constraintTop_toTopOf="@+id/cell12" />
+
+    <Button
+        android:id="@+id/cell14"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell13"
+        app:layout_constraintTop_toTopOf="@+id/cell13" />
+
+    <Button
+        android:id="@+id/cell15"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell14"
+        app:layout_constraintTop_toTopOf="@+id/cell14" />
+
+    <Button
+        android:id="@+id/cell21"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toStartOf="@+id/cell11"
+        app:layout_constraintTop_toBottomOf="@+id/cell11" />
+
+    <Button
+        android:id="@+id/cell22"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell21"
+        app:layout_constraintTop_toBottomOf="@+id/cell12" />
+
+    <Button
+        android:id="@+id/cell23"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell22"
+        app:layout_constraintTop_toBottomOf="@+id/cell13" />
+
+    <Button
+        android:id="@+id/cell24"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell23"
+        app:layout_constraintTop_toBottomOf="@+id/cell14" />
+
+    <Button
+        android:id="@+id/cell25"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell24"
+        app:layout_constraintTop_toBottomOf="@+id/cell15" />
+
+    <Button
+        android:id="@+id/cell31"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toStartOf="@+id/cell21"
+        app:layout_constraintTop_toBottomOf="@+id/cell21" />
+
+    <Button
+        android:id="@+id/cell32"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell31"
+        app:layout_constraintTop_toBottomOf="@+id/cell22" />
+
+    <Button
+        android:id="@+id/cell33"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell32"
+        app:layout_constraintTop_toBottomOf="@+id/cell23" />
+
+    <Button
+        android:id="@+id/cell34"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell33"
+        app:layout_constraintTop_toBottomOf="@+id/cell24" />
+
+    <Button
+        android:id="@+id/cell35"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell34"
+        app:layout_constraintTop_toBottomOf="@+id/cell25" />
+
+    <Button
+        android:id="@+id/cell41"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintLeft_toLeftOf="@+id/cell31"
+        app:layout_constraintTop_toBottomOf="@+id/cell31" />
+
+    <Button
+        android:id="@+id/cell42"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell41"
+        app:layout_constraintTop_toBottomOf="@+id/cell32" />
+
+    <Button
+        android:id="@+id/cell43"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell42"
+        app:layout_constraintTop_toBottomOf="@+id/cell33" />
+
+    <Button
+        android:id="@+id/cell44"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell43"
+        app:layout_constraintTop_toBottomOf="@+id/cell34" />
+
+    <Button
+        android:id="@+id/cell45"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell44"
+        app:layout_constraintTop_toBottomOf="@+id/cell35" />
+
+    <Button
+        android:id="@+id/cell51"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintTop_toBottomOf="@+id/cell41"
+        app:layout_constraintLeft_toLeftOf="@+id/cell41" />
+
+    <Button
+        android:id="@+id/cell52"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell51"
+        app:layout_constraintTop_toBottomOf="@+id/cell42" />
+
+    <Button
+        android:id="@+id/cell53"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell52"
+        app:layout_constraintTop_toBottomOf="@+id/cell43" />
+
+    <Button
+        android:id="@+id/cell54"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell53"
+        app:layout_constraintTop_toBottomOf="@+id/cell44" />
+
+    <Button
+        android:id="@+id/cell55"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="2dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toEndOf="@+id/cell54"
+        app:layout_constraintTop_toBottomOf="@+id/cell45" />
+
+    <TextView
+        android:id="@+id/totalBanner"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/totalTitle"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/rowTotal1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/VoltorbBanner"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:text="@string/voltorbTitle"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/rowVoltorb1"
+        app:layout_constraintTop_toTopOf="@+id/totalBanner" />
+
+    <TextView
+        android:id="@+id/sidewaysTotalBanner"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:rotation="-90"
+        android:text="@string/totalTitle"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/colTotal1" />
+
+    <TextView
+        android:id="@+id/sidewaysVoltorbBanner"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:rotation="-90"
+        android:text="@string/voltorbTitle"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/sidewaysTotalBanner"
+        app:layout_constraintTop_toTopOf="@+id/colVoltorb1" />
+
+    <EditText
+        android:id="@+id/rowTotal1"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:ems="2"
+        android:hint="@string/row1total"
+        android:inputType="number"
+        android:nextFocusDown="@+id/rowVoltorb1"
+        android:nextFocusForward="@+id/rowVoltorb1"
+        android:nextFocusRight="@+id/rowVoltorb1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/five"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/cell15"
+        app:layout_constraintTop_toTopOf="@+id/cell15" />
+
+    <EditText
+        android:id="@+id/rowTotal2"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:ems="2"
+        android:hint="@string/row2total"
+        android:inputType="number"
+        android:nextFocusDown="@+id/rowVoltorb2"
+        android:nextFocusForward="@+id/rowVoltorb2"
+        android:nextFocusRight="@+id/rowVoltorb2"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/five"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/cell25"
+        app:layout_constraintTop_toBottomOf="@+id/rowTotal1" />
+
+    <EditText
+        android:id="@+id/rowTotal3"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:ems="1"
+        android:hint="@string/row3total"
+        android:inputType="number"
+        android:nextFocusDown="@+id/rowVoltorb3"
+        android:nextFocusForward="@+id/rowVoltorb3"
+        android:nextFocusRight="@+id/rowVoltorb3"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/five"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/cell35"
+        app:layout_constraintTop_toBottomOf="@+id/rowTotal2" />
+
+    <EditText
+        android:id="@+id/rowTotal4"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:ems="2"
+        android:hint="@string/row4total"
+        android:inputType="number"
+        android:nextFocusDown="@+id/rowVoltorb4"
+        android:nextFocusForward="@+id/rowVoltorb4"
+        android:nextFocusRight="@+id/rowVoltorb4"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/five"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/cell45"
+        app:layout_constraintTop_toBottomOf="@+id/rowTotal3" />
+
+    <EditText
+        android:id="@+id/rowTotal5"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:ems="2"
+        android:hint="@string/row5total"
+        android:inputType="number"
+        android:nextFocusDown="@+id/rowVoltorb5"
+        android:nextFocusForward="@+id/rowVoltorb5"
+        android:nextFocusRight="@+id/rowVoltorb5"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/five"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/cell55"
+        app:layout_constraintTop_toBottomOf="@+id/rowTotal4" />
+
+    <EditText
+        android:id="@+id/rowVoltorb1"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:ems="1"
+        android:hint="@string/row1voltorb"
+        android:inputType="number"
+        android:nextFocusDown="@+id/rowTotal2"
+        android:nextFocusForward="@+id/rowTotal2"
+        android:nextFocusRight="@+id/rowTotal2"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/rowTotal1"
+        app:layout_constraintTop_toTopOf="@+id/rowTotal1" />
+
+    <EditText
+        android:id="@+id/rowVoltorb2"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:ems="1"
+        android:hint="@string/row2voltorb"
+        android:inputType="number"
+        android:nextFocusDown="@+id/rowTotal3"
+        android:nextFocusForward="@+id/rowTotal3"
+        android:nextFocusRight="@+id/rowTotal3"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/rowTotal2"
+        app:layout_constraintTop_toBottomOf="@+id/rowVoltorb1" />
+
+    <EditText
+        android:id="@+id/rowVoltorb3"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="R3V"
+        android:inputType="number"
+        android:nextFocusDown="@+id/rowTotal4"
+        android:nextFocusForward="@+id/rowTotal4"
+        android:nextFocusRight="@+id/rowTotal4"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/rowTotal3"
+        app:layout_constraintTop_toBottomOf="@+id/rowVoltorb2" />
+
+    <EditText
+        android:id="@+id/rowVoltorb4"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="R4V"
+        android:inputType="number"
+        android:nextFocusDown="@+id/rowTotal5"
+        android:nextFocusForward="@+id/rowTotal5"
+        android:nextFocusRight="@+id/rowTotal5"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/rowTotal4"
+        app:layout_constraintTop_toBottomOf="@+id/rowVoltorb3" />
+
+    <EditText
+        android:id="@+id/rowVoltorb5"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="R5V"
+        android:inputType="number"
+        android:nextFocusDown="@+id/colTotal1"
+        android:nextFocusForward="@+id/colTotal1"
+        android:nextFocusRight="@+id/colTotal1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/rowTotal5"
+        app:layout_constraintTop_toBottomOf="@+id/rowVoltorb4" />
+
+    <EditText
+        android:id="@+id/colTotal1"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="C1T"
+        android:inputType="number"
+        android:nextFocusDown="@+id/colVoltorb1"
+        android:nextFocusForward="@+id/colVoltorb1"
+        android:nextFocusRight="@+id/colVoltorb1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/five"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/cell51"
+        app:layout_constraintTop_toBottomOf="@+id/cell51" />
+
+    <EditText
+        android:id="@+id/colTotal2"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="C2T"
+        android:inputType="number"
+        android:nextFocusDown="@+id/colVoltorb2"
+        android:nextFocusForward="@+id/colVoltorb2"
+        android:nextFocusRight="@+id/colVoltorb2"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/five"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/colTotal1"
+        app:layout_constraintTop_toBottomOf="@+id/cell52" />
+
+    <EditText
+        android:id="@+id/colTotal3"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="C3T"
+        android:inputType="number"
+        android:nextFocusDown="@+id/colVoltorb3"
+        android:nextFocusForward="@+id/colVoltorb3"
+        android:nextFocusRight="@+id/colVoltorb3"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/five"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/colTotal2"
+        app:layout_constraintTop_toBottomOf="@+id/cell53" />
+
+    <EditText
+        android:id="@+id/colTotal4"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="C4T"
+        android:inputType="number"
+        android:nextFocusDown="@+id/colVoltorb4"
+        android:nextFocusForward="@+id/colVoltorb4"
+        android:nextFocusRight="@+id/colVoltorb4"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/five"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/colTotal3"
+        app:layout_constraintTop_toBottomOf="@+id/cell54" />
+
+    <EditText
+        android:id="@+id/colTotal5"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="C5T"
+        android:inputType="number"
+        android:nextFocusDown="@+id/colVoltorb5"
+        android:nextFocusForward="@+id/colVoltorb5"
+        android:nextFocusRight="@+id/colVoltorb5"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/five"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/colTotal4"
+        app:layout_constraintTop_toBottomOf="@+id/cell55" />
+
+    <EditText
+        android:id="@+id/colVoltorb1"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="C1V"
+        android:inputType="number"
+        android:nextFocusDown="@+id/colTotal2"
+        android:nextFocusForward="@+id/colTotal2"
+        android:nextFocusRight="@+id/colTotal2"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/colTotal1"
+        app:layout_constraintTop_toBottomOf="@+id/colTotal1" />
+
+    <EditText
+        android:id="@+id/colVoltorb2"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="C2V"
+        android:inputType="number"
+        android:nextFocusDown="@+id/colTotal3"
+        android:nextFocusForward="@+id/colTotal3"
+        android:nextFocusRight="@+id/colTotal3"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/colVoltorb1"
+        app:layout_constraintTop_toBottomOf="@+id/colTotal2" />
+
+    <EditText
+        android:id="@+id/colVoltorb3"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="C3V"
+        android:inputType="number"
+        android:nextFocusDown="@+id/colTotal4"
+        android:nextFocusForward="@+id/colTotal4"
+        android:nextFocusRight="@+id/colTotal4"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/colVoltorb2"
+        app:layout_constraintTop_toBottomOf="@+id/colTotal3" />
+
+    <EditText
+        android:id="@+id/colVoltorb4"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="C4V"
+        android:inputType="number"
+        android:nextFocusDown="@+id/colTotal5"
+        android:nextFocusForward="@+id/colTotal5"
+        android:nextFocusRight="@+id/colTotal5"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/colVoltorb3"
+        app:layout_constraintTop_toBottomOf="@+id/colTotal4" />
+
+    <EditText
+        android:id="@+id/colVoltorb5"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="C5V"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/colVoltorb4"
+        app:layout_constraintTop_toBottomOf="@+id/colTotal5" />
+
+    <Button
+        android:id="@+id/CalculateButton"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:backgroundTint="@color/VoltorbFlipGreen"
+        android:hapticFeedbackEnabled="true"
+        android:text="@string/calculate_button"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/colTotal5"
+        app:layout_constraintTop_toBottomOf="@+id/rowTotal5" />
+
+    <TextView
+        android:id="@+id/sample_text"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/nonResponseWarning"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/switchActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_videogame_asset_black_24dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_anchorGravity="bottom|right|end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

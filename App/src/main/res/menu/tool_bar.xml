@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/info"
+        android:enabled="true"
+        android:icon="@drawable/ic_info_outline_black_24dp"
+        android:orderInCategory="1"
+        android:title="@string/info_title"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/help"
+        android:enabled="true"
+        android:icon="@drawable/ic_help_outline_black_24dp"
+        android:orderInCategory="1"
+        android:title="@string/how_to_use_app_title"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/reset"
+        android:enabled="true"
+        android:icon="@drawable/ic_settings_backup_restore_black_24dp"
+        android:orderInCategory="2"
+        android:title="@string/reset_title"
+        app:showAsAction="ifRoom" />
+
+</menu>

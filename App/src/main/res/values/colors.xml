@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#188463</color>
+    <color name="colorPrimaryDark">#188463</color>
+    <color name="colorAccent">#E77352</color>
+    <color name="VoltorbFlipGreen">#29A56B</color>
+    <color name="VoltorbFlipDarkGreen">#188463</color>
+    <color name="GoodGreen">#00AE00</color>
+    <color name="BadRed">#CE0000</color>
+    <color name="OneGray">#d4d4d4</color>
+    <color name="DarkerGray">#888888</color>
+    <color name="ChanceYellow">#FFCF40</color>
+    <color name="BestBlue">#0079BF</color>
+</resources>
