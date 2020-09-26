@@ -4,6 +4,7 @@
 
 #include <cstdlib>
 #include <algorithm>
+#include <random>
 #include "Game.h"
 
 Game::Game() {
@@ -145,7 +146,7 @@ void Game::calculateBoard() {
             }
         }
     }
-    std::random_shuffle(std::begin(unorderedCells), std::end(unorderedCells), RNG());
+    std::shuffle(std::begin(unorderedCells), std::end(unorderedCells), std::mt19937(std::random_device()()));
 
     for (int i = 0; i < CELLS_PER_ROW; ++i) {
         for (int j = 0; j < CELLS_PER_ROW; ++j) {
@@ -231,7 +232,7 @@ bool Game::isFlagged(int row, int col) {
 }
 
 int Game::getNextLevel() {
-    if(points != 0) { //You Won!
+    if(points != 0) { // You Won!
         return level + 1;
     }
     else if((1 < pointCellsFlipped) && (pointCellsFlipped <= (level + 1))) {

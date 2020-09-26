@@ -139,6 +139,7 @@ int cell::GetValue()
 	else if (three) {
 		return 3;
 	}
+	return 1;
 }
 
 //void cell::PrintCell()

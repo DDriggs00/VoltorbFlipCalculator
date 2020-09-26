@@ -1,4 +1,4 @@
-package jolteon.voltorbflipcalculator;
+package com.devindriggs.voltorbflipcalculator;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -6,8 +6,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.PorterDuff;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -143,9 +143,10 @@ public class MainActivity extends AppCompatActivity {
     public void calculateButton(View v) {
 
         // Hide Keyboard
-        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        if(imm != null) {
-            imm.hideSoftInputFromWindow(Objects.requireNonNull(getCurrentFocus()).getWindowToken(), 0);
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
 
         //Defocus
@@ -345,6 +346,7 @@ public class MainActivity extends AppCompatActivity {
         int resourceID;
         for(int i = 0; i < 5; i++) {
             for(int j = 0; j < 5; j++) {
+                PreviousValue[i][j] = "1";
                 resourceID = getResources().getIdentifier("cell"  + (i+1) + (j+1), "id", getPackageName());
                 cell = findViewById(resourceID);
                 cell.getBackground().setColorFilter(0xFFd4d4d4, PorterDuff.Mode.MULTIPLY);

@@ -10,19 +10,19 @@
 
 //Create Class
 extern "C" JNIEXPORT jlong JNICALL
-Java_jolteon_voltorbflipcalculator_MainActivity_CreateCppClass(JNIEnv *env, jobject instance) {
+Java_com_devindriggs_voltorbflipcalculator_MainActivity_CreateCppClass(JNIEnv *env, jobject instance) {
     return (long)(new MainCppClass());
 }
 
 //Delete Class
 extern "C" JNIEXPORT void JNICALL
-Java_jolteon_voltorbflipcalculator_MainActivity_DeleteCppClass(JNIEnv *env, jobject instance, jlong cppClassPtr) {
+Java_com_devindriggs_voltorbflipcalculator_MainActivity_DeleteCppClass(JNIEnv *env, jobject instance, jlong cppClassPtr) {
     delete (MainCppClass*)(cppClassPtr);
 }
 
 //Verify Inputs
 extern "C" JNIEXPORT jboolean JNICALL
-Java_jolteon_voltorbflipcalculator_MainActivity_VerifyInputs
+Java_com_devindriggs_voltorbflipcalculator_MainActivity_VerifyInputs
         (JNIEnv *env, jobject instance, jintArray rowTotals_, jintArray rowVoltorbs_, jintArray colTotals_, jintArray colVoltorbs_, jlong cppClassPtr) {
 
     jint *rowTotals = env->GetIntArrayElements(rowTotals_, NULL);
@@ -44,7 +44,7 @@ Java_jolteon_voltorbflipcalculator_MainActivity_VerifyInputs
 
 // Do Initial Calculations
 extern "C" JNIEXPORT jboolean JNICALL
-Java_jolteon_voltorbflipcalculator_MainActivity_InitialCalculations
+Java_com_devindriggs_voltorbflipcalculator_MainActivity_InitialCalculations
         (JNIEnv *env, jobject instance, jintArray rowTotals_, jintArray rowVoltorbs_, jintArray colTotals_, jintArray colVoltorbs_, jlong cppClassPtr) {
 
     jint *rowTotals = env->GetIntArrayElements(rowTotals_, NULL);
@@ -66,7 +66,7 @@ Java_jolteon_voltorbflipcalculator_MainActivity_InitialCalculations
 
 // Get the value of a cell to print
 extern "C" JNIEXPORT jstring JNICALL
-Java_jolteon_voltorbflipcalculator_MainActivity_GetCellValue
+Java_com_devindriggs_voltorbflipcalculator_MainActivity_GetCellValue
         (JNIEnv *env, jobject instance, jint row, jint col, jlong cppClassPtr) {
 
     MainCppClass *mainClassPtr = (MainCppClass*)cppClassPtr;
@@ -80,7 +80,7 @@ Java_jolteon_voltorbflipcalculator_MainActivity_GetCellValue
 
 //Flip a cell
 extern "C" JNIEXPORT jboolean JNICALL
-Java_jolteon_voltorbflipcalculator_MainActivity_FlipCell
+Java_com_devindriggs_voltorbflipcalculator_MainActivity_FlipCell
         (JNIEnv *env, jobject instance, jint row, jint col, jint val, jlong cppClassPtr) {
 
     MainCppClass *mainClassPtr = (MainCppClass*)cppClassPtr;
@@ -92,7 +92,7 @@ Java_jolteon_voltorbflipcalculator_MainActivity_FlipCell
 
 // Returns how many layouts have the specific cell as the specific value
 extern "C" JNIEXPORT jint JNICALL
-Java_jolteon_voltorbflipcalculator_MainActivity_GetNumValues
+Java_com_devindriggs_voltorbflipcalculator_MainActivity_GetNumValues
         (JNIEnv *env, jobject instance, jint row, jint col, jint val, jlong cppClassPtr) {
 
     MainCppClass *mainClassPtr = (MainCppClass*)cppClassPtr;
@@ -102,7 +102,7 @@ Java_jolteon_voltorbflipcalculator_MainActivity_GetNumValues
 
 // Returns the total number of layouts
 extern "C" JNIEXPORT jint JNICALL
-Java_jolteon_voltorbflipcalculator_MainActivity_GetTotalLayouts(JNIEnv *env, jobject instance, jlong cppClassPtr) {
+Java_com_devindriggs_voltorbflipcalculator_MainActivity_GetTotalLayouts(JNIEnv *env, jobject instance, jlong cppClassPtr) {
 
     MainCppClass *mainClassPtr = (MainCppClass*)cppClassPtr;
 
@@ -111,7 +111,7 @@ Java_jolteon_voltorbflipcalculator_MainActivity_GetTotalLayouts(JNIEnv *env, job
 
 // Returns if the selected cell is the best cell, but still has risk.
 extern "C" JNIEXPORT jboolean JNICALL
-Java_jolteon_voltorbflipcalculator_MainActivity_IsBestCell(JNIEnv *env, jobject instance, jint row, jint col, jlong cppClassPtr) {
+Java_com_devindriggs_voltorbflipcalculator_MainActivity_IsBestCell(JNIEnv *env, jobject instance, jint row, jint col, jlong cppClassPtr) {
 
     MainCppClass *mainClassPtr = (MainCppClass*)cppClassPtr;
 
@@ -120,7 +120,7 @@ Java_jolteon_voltorbflipcalculator_MainActivity_IsBestCell(JNIEnv *env, jobject 
 }
 
 extern "C" JNIEXPORT jboolean JNICALL
-Java_jolteon_voltorbflipcalculator_MainActivity_IsKnown(JNIEnv *env, jobject instance, jint row, jint col, jlong cppClassPtr) {
+Java_com_devindriggs_voltorbflipcalculator_MainActivity_IsKnown(JNIEnv *env, jobject instance, jint row, jint col, jlong cppClassPtr) {
 
     MainCppClass *mainClassPtr = (MainCppClass*)cppClassPtr;
 
@@ -129,43 +129,43 @@ Java_jolteon_voltorbflipcalculator_MainActivity_IsKnown(JNIEnv *env, jobject ins
 
 // Below here is for the game part of the app
 extern "C" JNIEXPORT jlong JNICALL
-Java_jolteon_voltorbflipcalculator_Game_createGamePointer(JNIEnv *env, jobject instance) {
+Java_com_devindriggs_voltorbflipcalculator_Game_createGamePointer(JNIEnv *env, jobject instance) {
     long gameptr = (long)(new Game());
     jlong  test = gameptr;
     return test;
 }
 
 extern "C" JNIEXPORT void JNICALL
-Java_jolteon_voltorbflipcalculator_Game_deleteGamePointer(JNIEnv *env, jobject instance, jlong gamePtr) {
+Java_com_devindriggs_voltorbflipcalculator_Game_deleteGamePointer(JNIEnv *env, jobject instance, jlong gamePtr) {
     delete (Game*)(gamePtr);
 }
 
 extern "C" JNIEXPORT jint JNICALL
-Java_jolteon_voltorbflipcalculator_Game_gameFlipCell(JNIEnv *env, jobject instance, jint row, jint col, jlong gamePtr) {
+Java_com_devindriggs_voltorbflipcalculator_Game_gameFlipCell(JNIEnv *env, jobject instance, jint row, jint col, jlong gamePtr) {
     Game *gameClassPtr = (Game*)(gamePtr);
     return gameClassPtr->flipCell(row, col);
 }
 
 extern "C" JNIEXPORT jint JNICALL
-Java_jolteon_voltorbflipcalculator_Game_gameGetCell(JNIEnv *env, jobject instance, jint row, jint col, jlong gamePtr) {
+Java_com_devindriggs_voltorbflipcalculator_Game_gameGetCell(JNIEnv *env, jobject instance, jint row, jint col, jlong gamePtr) {
     Game *gameClassPtr = (Game*)(gamePtr);
     return gameClassPtr->getCellVal(row,col);
 }
 
 extern "C" JNIEXPORT jint JNICALL
-Java_jolteon_voltorbflipcalculator_Game_getTotal(JNIEnv *env, jobject instance, jboolean isVoltorb, jboolean isCol, jint index, jlong gamePtr) {
+Java_com_devindriggs_voltorbflipcalculator_Game_getTotal(JNIEnv *env, jobject instance, jboolean isVoltorb, jboolean isCol, jint index, jlong gamePtr) {
     Game *gameClassPtr = (Game*)(gamePtr);
     return gameClassPtr->getTotal((bool)isVoltorb,(bool)isCol,index);
 }
 
 extern "C" JNIEXPORT jboolean JNICALL
-Java_jolteon_voltorbflipcalculator_Game_gameIsFlipped(JNIEnv *env, jobject instance, jint row, jint col, jlong gamePtr) {
+Java_com_devindriggs_voltorbflipcalculator_Game_gameIsFlipped(JNIEnv *env, jobject instance, jint row, jint col, jlong gamePtr) {
     Game *gameClassPtr = (Game*)(gamePtr);
     return (jboolean)(gameClassPtr->isFlipped(row,col));
 }
 
 extern "C" JNIEXPORT jboolean JNICALL
-Java_jolteon_voltorbflipcalculator_Game_isWin(JNIEnv *env, jobject instance, jlong gamePtr) {
+Java_com_devindriggs_voltorbflipcalculator_Game_isWin(JNIEnv *env, jobject instance, jlong gamePtr) {
     Game *gameClassPtr = (Game*)(gamePtr);
     return (jboolean)(gameClassPtr->isWin());
 
@@ -173,40 +173,46 @@ Java_jolteon_voltorbflipcalculator_Game_isWin(JNIEnv *env, jobject instance, jlo
 }
 
 extern "C" JNIEXPORT jint JNICALL
-Java_jolteon_voltorbflipcalculator_Game_getPoints(JNIEnv *env, jobject instance, jlong gamePtr) {
+Java_com_devindriggs_voltorbflipcalculator_Game_getPoints(JNIEnv *env, jobject instance, jlong gamePtr) {
     Game *gameClassPtr = (Game*)(gamePtr);
     return gameClassPtr->getPoints();
 }
 
 
 extern "C" JNIEXPORT void JNICALL
-Java_jolteon_voltorbflipcalculator_Game_startNextLevel(JNIEnv *env, jobject instance, jlong gamePtr) {
+Java_com_devindriggs_voltorbflipcalculator_Game_startNextLevel(JNIEnv *env, jobject instance, jlong gamePtr) {
     Game *gameClassPtr = (Game*)(gamePtr);
     gameClassPtr->nextLevel();
 }
 
 extern "C" JNIEXPORT jint JNICALL
-Java_jolteon_voltorbflipcalculator_Game_getCurrentLevel(JNIEnv *env, jobject instance, jlong gamePtr) {
+Java_com_devindriggs_voltorbflipcalculator_Game_getCurrentLevel(JNIEnv *env, jobject instance, jlong gamePtr) {
     Game *gameClassPtr = (Game*)(gamePtr);
     return gameClassPtr->getLevel();
 }
 
+extern "C" JNIEXPORT jint JNICALL
+Java_com_devindriggs_voltorbflipcalculator_Game_getNextLevel(JNIEnv *env, jobject instance, jlong gamePtr) {
+    Game *gameClassPtr = (Game*)(gamePtr);
+    return gameClassPtr->getNextLevel();
+}
+
 extern "C" JNIEXPORT void JNICALL
-Java_jolteon_voltorbflipcalculator_Game_flag(JNIEnv *env, jobject instance, jint row, jint col, jlong gamePtr) {
+Java_com_devindriggs_voltorbflipcalculator_Game_flag(JNIEnv *env, jobject instance, jint row, jint col, jlong gamePtr) {
     Game *gameClassPtr = (Game*)(gamePtr);
     gameClassPtr->flag(row, col);
     return;
 }
 
 extern "C" JNIEXPORT void JNICALL
-Java_jolteon_voltorbflipcalculator_Game_unflag(JNIEnv *env, jobject instance, jint row, jint col, jlong gamePtr) {
+Java_com_devindriggs_voltorbflipcalculator_Game_unflag(JNIEnv *env, jobject instance, jint row, jint col, jlong gamePtr) {
     Game *gameClassPtr = (Game*)(gamePtr);
     gameClassPtr->unflag(row, col);
     return;
 }
 
 extern "C" JNIEXPORT jboolean JNICALL
-Java_jolteon_voltorbflipcalculator_Game_isFlagged(JNIEnv *env, jobject instance, jint row, jint col, jlong gamePtr) {
+Java_com_devindriggs_voltorbflipcalculator_Game_isFlagged(JNIEnv *env, jobject instance, jint row, jint col, jlong gamePtr) {
     Game *gameClassPtr = (Game*)(gamePtr);
     return (jboolean)(gameClassPtr->isFlagged(row, col));
 }

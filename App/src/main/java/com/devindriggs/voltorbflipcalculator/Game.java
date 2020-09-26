@@ -1,12 +1,12 @@
-package jolteon.voltorbflipcalculator;
+package com.devindriggs.voltorbflipcalculator;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.PorterDuff;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -16,6 +16,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.devindriggs.voltorbflipcalculator.R;
 
 public class Game extends AppCompatActivity {
     private boolean finishLastTap = false;
@@ -344,7 +346,14 @@ public class Game extends AppCompatActivity {
     }
 
     public void triggerLoss() {
-        Alert("Voltorb! You Lose.","Dropped to level " + (getCurrentLevel( gamePtr ) ) +"\nTouch board to continue" );
+        int current_level = getCurrentLevel(gamePtr);
+        int next_level = getNextLevel(gamePtr);
+        if (current_level > next_level) {
+            Alert("Voltorb! You Lose.","Dropped to level " + next_level + "\nTouch board to continue" );
+        }
+        else {
+            Alert("Voltorb! You Lose.","Touch board to continue" );
+        }
         revealBoard();
         finishLastTap = true;
     }
@@ -387,6 +396,7 @@ public class Game extends AppCompatActivity {
     public native int gameGetCell(int row, int col, long gamePtr);
     public native int getTotal(boolean isVoltorb, boolean isCol, int index, long gamePtr);
     public native int getCurrentLevel(long gamePtr);
+    public native int getNextLevel(long gamePtr);
     public native boolean gameIsFlipped(int row, int col, long gamePtr);
     public native boolean isWin(long gamePtr);
     public native int getPoints(long gamePtr);
